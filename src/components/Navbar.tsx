@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Menu, X, Globe, User, ChevronDown } from 'lucide-react';
 import { motion } from 'framer-motion';
+import logo from '../assets/logo.jpg'; // Step 1: Import the logo image
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -18,8 +19,8 @@ const Navbar = () => {
           {/* Logo */}
           <div className="flex-shrink-0 flex items-center">
             <img
-              src="/src/assets/logo.jpg" // Adjust the path based on where you place the image
-              alt="Logo"
+              src={logo} // Step 2: Use the imported logo variable here
+              alt="Malik Computers Logo"
               className="w-10 h-10 rounded-lg mr-3"
             />
             <span className="text-2xl font-bold text-gray-900">Malik Computers</span>
